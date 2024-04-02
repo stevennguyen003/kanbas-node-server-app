@@ -23,6 +23,10 @@ export default function CourseRoutes(app) {
             .filter((c) => c._id !== id);
         res.sendStatus(204);
     });
+    app.get("/api/courses", (req, res) => {
+        const courses = Database.courses;
+        res.send(courses);
+    });
     app.post("/api/courses", (req, res) => {
         const course = {
             ...req.body,
@@ -30,9 +34,5 @@ export default function CourseRoutes(app) {
         };
         Database.courses.push(course);
         res.send(course);
-    });
-    app.get("/api/courses", (req, res) => {
-        const courses = Database.courses;
-        res.send(courses);
     });
 }
