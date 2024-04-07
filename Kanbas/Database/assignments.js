@@ -3,6 +3,7 @@ export default [
       _id: "6557fcb7a11aca237708374b",
       title: "Propulsion Assignment",
       course: "RS101",
+      image: "rocket-propulsion.png"
     },
     {
       _id: "6557fcb7a11aca237708374c",

@@ -7,6 +7,7 @@ export default [
       endDate: "2023-05-15",
       department: "D123",
       credits: 4,
+      image: "rocket-propulsion.png",
       description:
         "This course provides an in-depth study of the fundamentals of rocket propulsion, covering topics such as propulsion theory, engine types, fuel chemistry, and the practical applications of rocket technology. Designed for students with a strong background in physics and engineering, the course includes both theoretical instruction and hands-on laboratory work",
     },
