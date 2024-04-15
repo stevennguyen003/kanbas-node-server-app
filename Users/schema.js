@@ -5,12 +5,11 @@ const userSchema = new mongoose.Schema({
     firstName: String,
     email: String,
     lastName: String,
-    dob: String,
+    dob: Date,
     role: {
-        type: String,
-        enum: ["STUDENT", "FACULTY", "ADMIN", "USER"],
-        default: "USER",
-    },
-},
-    { collection: "users" });
+      type: String,
+      enum: ["STUDENT", "FACULTY", "ADMIN", "USER"],
+      default: "USER",},
+  },
+  { collection: "users" });
 export default userSchema;
