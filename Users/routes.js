@@ -48,7 +48,7 @@ export default function UserRoutes(app) {
         } else {
             res.sendStatus(401);
         }
-
+        console.log(process.env.FRONTEND_URL);
     };
     const signout = (req, res) => {
         req.session.destroy();

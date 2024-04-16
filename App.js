@@ -13,7 +13,7 @@ mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(
     cors({
-        origin: ["https://localhost:3000", process.env.FRONTEND_URL],
+        origin: ["http://localhost:3000", process.env.FRONTEND_URL],
         credentials: true,
     })
 );
