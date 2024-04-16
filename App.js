@@ -13,8 +13,7 @@ mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(
     cors({
-        credentials: true,
-        origin: process.env.FRONTEND_URL
+        origin: [process.env.FRONTEND_URL, "https://master--courageous-malasada-e6ec31.netlify.app/"],
     })
 );
 const sessionOptions = {
