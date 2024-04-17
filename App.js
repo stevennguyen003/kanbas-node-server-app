@@ -8,7 +8,7 @@ import Hello from "./Hello.js";
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from "./Kanbas/modules/routes.js";
 import cors from "cors";
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas'
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/kanbas/courses'
 mongoose.connect(CONNECTION_STRING);
 const app = express();
 app.use(cors({
@@ -35,4 +35,4 @@ CourseRoutes(app);
 Hello(app);
 Lab5(app);
 UserRoutes(app);
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
