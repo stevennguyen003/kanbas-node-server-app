@@ -13,6 +13,9 @@ const todos = [
     { id: 4, title: "Task 4", description: "todo 4 description", completed: true },
 ];
 const Lab5 = (app) => {
+    app.get("/a5/todos", (req, res) => {
+        res.json(todos);
+    });
     app.post("/a5/todos", (req, res) => {
         const newTodo = {
             ...req.body,
